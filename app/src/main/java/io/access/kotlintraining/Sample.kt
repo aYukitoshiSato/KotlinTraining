@@ -46,6 +46,7 @@ fun Int.isEven() = this % 2 == 0
 
 fun oddeven() {
     val a = 5
-    println (a.isOdd())
-    println (a.isEven())
+    println(a.isOdd())
+    println(a.isEven())
 }
+
