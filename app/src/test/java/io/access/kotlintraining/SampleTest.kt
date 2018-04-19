@@ -32,8 +32,8 @@ class SampleTest {
         assertEquals("FizzBuzz", fizzbuzz(15))
     }
 
-    }@Test
-    fun testisLeapyear(){
+    @Test
+    fun testisLeapyear() {
         assertEquals(true, isLeapYear(1600))
         assertEquals(true, isLeapYear(2000))
         assertEquals(true, isLeapYear(2400))
@@ -42,5 +42,16 @@ class SampleTest {
         assertEquals(false, isLeapYear(2200))
         assertEquals(false, isLeapYear(1999))
     }
+
+    @Test
+    fun testoddeven() {
+        oddeven()
+        // Example of test
+        val expected = 1
+        val actual = 1
+        assertEquals(expected, actual, "[want] $expected [got] $actual")
+
+    }
+}
 
 

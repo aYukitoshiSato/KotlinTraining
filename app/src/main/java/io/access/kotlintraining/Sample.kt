@@ -38,3 +38,14 @@ fun isLeapYear(y: Int): Boolean {
         return false
     }
 }
+
+fun Int.isOdd() = this % 2 == 1
+
+fun Int.isEven() = this % 2 == 0
+
+
+fun oddeven() {
+    val a = 5
+    println (a.isOdd())
+    println (a.isEven())
+}
