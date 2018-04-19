@@ -1,6 +1,7 @@
 package io.access.kotlintraining
 
 import java.util.Scanner
+import java.util.Random
 
 fun welcome() {
     println("welcome to ACCESS!")
@@ -48,5 +49,19 @@ fun oddeven() {
     val a = 5
     println(a.isOdd())
     println(a.isEven())
+}
+
+class Dice constructor(n: Int) {
+    var counter = 0
+    val dicenum: Int = n
+    fun roll(): Int {
+        if (counter >= 100) {
+            throw Exception("I was broken")
+        }
+        val random = Random()
+        val m = random.nextInt(dicenum)
+        counter++
+        return m
+    }
 }
 

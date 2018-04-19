@@ -40,8 +40,14 @@ class SampleTest {
         val expected = 1
         val actual = 1
         assertEquals(expected, actual, "[want] $expected [got] $actual")
+    }
 
+    @Test
+    fun testdiceroll() {
+        val d = Dice(16)
+        for (i in 1..100) {
+            println(d.roll()) // 1〜16 までの数字
+        }
+        println(d.roll())
     }
 }
-
-
