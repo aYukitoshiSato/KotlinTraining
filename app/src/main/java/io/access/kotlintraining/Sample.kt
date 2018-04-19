@@ -11,20 +11,19 @@ fun hello() {
 }
 
 
-fun fizzbuzz() {
-    for (i in 1..100)
-        when {
-            i % 15 == 0 -> println("FizzBuzz")
-            i % 3 == 0 -> println("Fizz")
-            i % 5 == 0 -> println("Buzz")
-            else -> println(i)
-        }
+fun fizzbuzz(i: Int): String {
+    when {
+        i % 15 == 0 -> return "FizzBuzz"
+        i % 3 == 0 -> return "Fizz"
+        i % 5 == 0 -> return "Buzz"
+        else -> return "$i"
+    }
 }
 
 fun inputyear() {
     val input = Scanner(System.`in`)
     println("年を入力")
-    var year : Int = input.nextInt()
+    var year: Int = input.nextInt()
     isLeapYear(year)
 }
 

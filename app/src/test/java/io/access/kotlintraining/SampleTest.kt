@@ -27,11 +27,10 @@ class SampleTest {
 
     @Test
     fun testfizzbuzz() {
-        fizzbuzz()
-        // Example of test
-        val expected = 1
-        val actual = 1
-        assertEquals(expected, actual, "[want] $expected [got] $actual")
+        assertEquals("Fizz", fizzbuzz(3))
+        assertEquals("Buzz", fizzbuzz(5))
+        assertEquals("FizzBuzz", fizzbuzz(15))
+    }
 
     }@Test
     fun testisLeapyear(){
@@ -43,5 +42,5 @@ class SampleTest {
         assertEquals(false, isLeapYear(2200))
         assertEquals(false, isLeapYear(1999))
     }
-}
+
 
