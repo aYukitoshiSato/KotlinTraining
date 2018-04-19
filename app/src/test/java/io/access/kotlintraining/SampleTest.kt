@@ -23,5 +23,15 @@ class SampleTest {
         assertEquals(expected, actual, "[want] $expected [got] $actual")
 
     }
+
+    @Test
+    fun testfizzbuzz() {
+        fizzbuzz()
+        // Example of test
+        val expected = 1
+        val actual = 1
+        assertEquals(expected, actual, "[want] $expected [got] $actual")
+
+    }
 }
 
