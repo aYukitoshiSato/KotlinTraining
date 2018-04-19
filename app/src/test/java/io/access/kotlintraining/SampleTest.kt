@@ -16,6 +16,12 @@ class SampleTest {
 
     @Test
     fun testHello() {
-        // TODO: implement to call hello function
+        hello()
+        // Example of test
+        val expected = 1
+        val actual = 1
+        assertEquals(expected, actual, "[want] $expected [got] $actual")
+
     }
 }
+
