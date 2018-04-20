@@ -113,3 +113,24 @@ fun callNabeAtsu() {
         println(n.next())
     }
 }
+
+
+fun sendMessageToClient(client: Client?, message: String?, mailer: Mailer) {
+    client?.let {
+        val personalInfo = client.personalInfo
+        personalInfo?.let {
+            if (personalInfo.email == null || message == null) return;
+            val email = personalInfo.email
+            mailer.sendMessage(email, message)
+        }
+    }
+}
+
+// コンパイル通すための諸々
+class Client(val personalInfo: PersonalInfo?)
+
+class PersonalInfo(val email: String?)
+
+interface Mailer {
+    fun sendMessage(email: String, message: String)
+}
