@@ -76,3 +76,13 @@ class Dice constructor(n: Int) {
         return m
     }
 }
+
+class MyCustomClass {
+    var counter: Int = 0
+    var propertyWithCounter: Int = 0
+        set(value) {
+            println("propertyに${value}をsetしました")
+            field = value
+            counter++
+        }
+}

@@ -58,4 +58,13 @@ class SampleTest {
         }
         println(d.roll())
     }
+
+    @Test
+    fun testmyCustomClass() {
+        val p = MyCustomClass()
+        p.propertyWithCounter = 123
+        p.propertyWithCounter = 456
+        p.propertyWithCounter = 789
+        println(p.counter) // 3
+    }
 }
