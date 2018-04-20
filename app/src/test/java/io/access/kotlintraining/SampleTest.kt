@@ -23,6 +23,13 @@ class SampleTest {
     }
 
     @Test
+    fun callfizzbuzz() {
+        for (i in 1..100) {
+            println(fizzbuzz(i))
+        }
+    }
+
+    @Test
     fun testisLeapyear() {
         assertEquals(true, isLeapYear(1600))
         assertEquals(true, isLeapYear(2000))
@@ -66,5 +73,10 @@ class SampleTest {
         p.propertyWithCounter = 456
         p.propertyWithCounter = 789
         println(p.counter) // 3
+    }
+
+    @Test
+    fun testNabeAtsu() {
+        callNabeAtsu()
     }
 }

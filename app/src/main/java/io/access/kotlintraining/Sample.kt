@@ -17,9 +17,10 @@ fun fizzbuzz(i: Int): String {
         i % 15 == 0 -> return "FizzBuzz"
         i % 3 == 0 -> return "Fizz"
         i % 5 == 0 -> return "Buzz"
-        else -> return "$i"
+        else -> return i.toString()
     }
 }
+
 
 fun inputyear() {
     val input = Scanner(System.`in`)
@@ -40,6 +41,7 @@ fun isLeapYear(y: Int): Boolean {
     }
 }
 
+
 fun power(a: Int, n: Int): Long {
     if (a < 0 || n < 0) {
         println("inputs must be positive. return 0")
@@ -52,16 +54,17 @@ fun power(a: Int, n: Int): Long {
     return answer
 }
 
+
 fun Int.isOdd() = this % 2 == 1
 
 fun Int.isEven() = this % 2 == 0
-
 
 fun oddeven() {
     val a = 5
     println(a.isOdd())
     println(a.isEven())
 }
+
 
 class Dice constructor(n: Int) {
     var counter = 0
@@ -77,6 +80,7 @@ class Dice constructor(n: Int) {
     }
 }
 
+
 class MyCustomClass {
     var counter: Int = 0
     var propertyWithCounter: Int = 0
@@ -85,4 +89,27 @@ class MyCustomClass {
             field = value
             counter++
         }
+}
+
+
+class NabeAtsu {
+    var counter: Int = 0
+    fun next(): String {
+        counter++
+        if (counter % 3 == 0) {
+            return "Aho"
+        }
+        val regex = Regex("3")
+        if (regex.containsMatchIn("${counter}")) {
+            return "Aho"
+        }
+        return counter.toString()
+    }
+}
+
+fun callNabeAtsu() {
+    val n = NabeAtsu()
+    for (i in 1..100) {
+        println(n.next())
+    }
 }
