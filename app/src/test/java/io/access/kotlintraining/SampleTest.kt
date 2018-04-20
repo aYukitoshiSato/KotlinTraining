@@ -34,6 +34,14 @@ class SampleTest {
     }
 
     @Test
+    fun testpower() {
+        assertEquals(4, power(4, 1))
+        assertEquals(9, power(3, 2))
+        assertEquals(256, power(4, 4))
+        assertEquals(1024, power(2, 10))
+    }
+
+    @Test
     fun testoddeven() {
         oddeven()
         // Example of test

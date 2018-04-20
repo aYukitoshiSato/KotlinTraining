@@ -40,6 +40,18 @@ fun isLeapYear(y: Int): Boolean {
     }
 }
 
+fun power(a: Int, n: Int): Long {
+    if (a < 0 || n < 0) {
+        println("inputs must be positive. return 0")
+        return 0
+    }
+    var answer: Long = a.toLong()
+    for (i in 1..n - 1) {
+        answer *= a
+    }
+    return answer
+}
+
 fun Int.isOdd() = this % 2 == 1
 
 fun Int.isEven() = this % 2 == 0
@@ -64,4 +76,3 @@ class Dice constructor(n: Int) {
         return m
     }
 }
-
